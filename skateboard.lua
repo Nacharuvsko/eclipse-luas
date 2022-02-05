@@ -8,6 +8,11 @@ local isEnabled
 
 function onCreateMove(cmd)
 
+    local localPlayer = entitylist.getEntity(entitylist.getLocalPlayer())
+    if not (localPlayer:sane() and localPlayer:alive()) then return end -- reduntant?
+
+    if localPlayer:movetype() == MOVETYPE_LADDER or localPlayer:movetype() == MOVETYPE_NOCLIP then return end -- le ladder fix >;3
+
     cmd.buttons = bit.band(cmd.buttons, bit.bnot(IN_BACK))
     cmd.buttons = bit.band(cmd.buttons, bit.bnot(IN_FORWARD))
     cmd.buttons = bit.band(cmd.buttons, bit.bnot(IN_MOVELEFT))
