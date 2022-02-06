@@ -1,11 +1,11 @@
 --name NiggerAPI
---desc sexxxxxxx $$$$$
+--desc Put it into .eclipse/scripts/libs/
 --author winston
 
 --[[
     Some things are pasted ;w;
     
-    implement it by `require("niggerapi")`
+    implement it by `require("libs/niggerapi")`
 ]]
 
 NIGGER_API_VERSION = 1.1 -- le version of le NiggerAPI
